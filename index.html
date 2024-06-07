@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="
+https://cdn.jsdelivr.net/npm/axios@1.7.2/dist/axios.min.js
+"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Ahmad Store</title>
+  </head>
+  <body>
+    <header>
+      <h1>Ahmad Store Panel</h1>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./products.html">All Products</a></li>
+      </ul>
+    </header>
+
+    <form onsubmit="createProduct(); return false ">
+      <label for="productName">Product Name</label>
+      <div>
+        <input type="text" id="productName" />
+      </div>
+      <br />
+      <label for="productPrice">Product Price</label>
+      <div>
+        <input type="number" id="productPrice" required />
+      </div>
+      <br />
+      <label for="currencyCode">Currency Code</label>
+      <div>
+        <input type="text" id="currencyCode" required />
+      </div>
+      <br />
+      <label for="numberOfSale">Number Of Sale</label>
+      <div>
+        <input type="number" id="numberOfSale" required />
+      </div>
+      <br />
+      <label for="rating">Product Rating</label>
+      <div>
+        <input type="number" min="0" max="5" id="rating" required />
+      </div>
+      <br />
+      <label for="isFreeShipping">Free Shipping</label>
+      <div>
+        <select name="isFreeShipping" id="isFreeShipping">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <br />
+      <label for="shopName">shop Name</label>
+      <div>
+        <input type="text" id="shopName" required />
+      </div>
+      <br />
+      <div>
+        <input type="submit" value="Add in database" />
+      </div>
+    </form>
+
+    <p id="message"></p>
+
+    <script src="./scriptHome.js"></script>
+  </body>
+</html>
